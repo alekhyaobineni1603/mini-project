@@ -1,0 +1,21 @@
+{
+  "name": "placement-readiness-system",
+  "version": "1.0.0",
+  "description": "AI-powered placement readiness system with comprehensive modules",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "build": "echo 'Build process completed'",
+    "dev": "live-server --port=3000 --open=/index.html"
+  },
+  "keywords": ["placement", "readiness", "ai", "education", "career"],
+  "author": "Placement Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-date-fns": "^3.0.0"
+  }
+}

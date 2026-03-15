@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Letter For You</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#141e30,#243b55);
+font-family:'Segoe UI',sans-serif;
+color:white;
+overflow:hidden;
+}
+
+/* envelope container */
+
+.container{
+text-align:center;
+}
+
+/* envelope */
+
+.envelope{
+position:relative;
+width:300px;
+height:200px;
+background:#ff6a88;
+border-radius:5px;
+cursor:pointer;
+margin:auto;
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+border-left:150px solid transparent;
+border-right:150px solid transparent;
+border-top:100px solid #ff8fa3;
+transition:0.6s;
+transform-origin:top;
+}
+
+/* open animation */
+
+.envelope.open:before{
+transform:rotateX(180deg);
+}
+
+/* letter */
+
+.letter{
+position:absolute;
+top:20px;
+left:20px;
+right:20px;
+bottom:20px;
+background:white;
+color:#333;
+padding:20px;
+border-radius:5px;
+transform:translateY(100px);
+opacity:0;
+transition:0.6s;
+overflow:auto;
+}
+
+.envelope.open .letter{
+transform:translateY(0);
+opacity:1;
+}
+
+h2{
+color:#ff4d6d;
+margin-top:0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>A Small Letter For You</h1>
+<p>Click the envelope</p>
+
+<div class="envelope" onclick="openEnvelope()" id="env">
+
+<div class="letter">
+
+<h2>Happy 20th Birthday</h2>
+
+<p>
+Maybe our story wasn't planned by us.
+Maybe it was written somewhere above.
+By God's grace our paths crossed,
+and slowly we became part of each other's lives.
+</p>
+
+<p>
+Life brought many challenges,
+but somehow we kept walking forward together.
+And today we reached here.
+</p>
+
+<p>
+No matter where life takes us,
+just stay with me forever.
+</p>
+
+<p>
+You are my friend, my comfort,
+my home, my world.
+</p>
+
+<p>
+— yours Rowdyyyy ❤️
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openEnvelope(){
+document.getElementById("env").classList.toggle("open")
+}
+
+</script>
+
+</body>
+</html>
